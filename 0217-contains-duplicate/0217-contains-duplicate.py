@@ -3,8 +3,8 @@ class Solution:
         hashmap = defaultdict()
         
         for i, num in enumerate(nums):
-            if num in hashmap:
-                return True
-            else:
+            if num not in hashmap:
                 hashmap[num] = i
+            else:
+                return True
         return False
